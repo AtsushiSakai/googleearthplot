@@ -17,6 +17,18 @@ class googleearthplot:
     def __init__(self):
         self.kml = simplekml.Kml()
 
+    def PlotLineChartFromCSV(self, filepath, name="", color="red", width=5):
+        """
+        Plot Line Chart from CSVfile
+        """
+        print "[PlotLineChartFromCSV] plotting a line chart from csv file:"+filepath
+        data=pandas.read_csv(filepath)
+
+        if "height" in data:
+            self.PlotLineChart(data["lat"],data["lon"],heightList=data["height"], name=name,color=color,width=width)
+        else:
+            self.PlotLineChart(data["lat"],data["lon"],name=name,color=color,width=width)
+     
     def PlotLineChart(self, latList, lonList, heightList=[], name="", color="red", width=5):
         """
         Plot Line Chart
@@ -121,9 +133,9 @@ if __name__ == '__main__':
     gep1.PlotBarChart(lat,lon,num,size,name,color);
     gep1.GenerateKMLFile(filepath="sample1.kml")
 
-    #bar plot from csv
+    #bar plot from csv file
     gep=googleearthplot()
-    gep.PlotBarChartsFromCSV("barchartsampledata.csv")
+    gep.PlotBarChartsFromCSV("sampledata/barchartsampledata.csv")
     gep.GenerateKMLFile(filepath="sample2.kml")
 
     #Plot line chart
@@ -141,5 +153,14 @@ if __name__ == '__main__':
     gep3.PlotLineChart(lat, lon, heightList=height, name="trajectory2",color="aqua")
     gep3.GenerateKMLFile(filepath="sample4.kml")
  
-    
+    #line plot from csv file
+    gep4=googleearthplot()
+    gep4.PlotLineChartFromCSV("sampledata/lineplotsampledata.csv", name="trajectory3", color="gold", width=10)
+    gep4.GenerateKMLFile(filepath="sample5.kml")
+
+    #line plot from csv file with height
+    gep4=googleearthplot()
+    gep4.PlotLineChartFromCSV("sampledata/lineplotsampledata2.csv", name="trajectory4", color="orange", width=10)
+    gep4.GenerateKMLFile(filepath="sample6.kml")
+
 
