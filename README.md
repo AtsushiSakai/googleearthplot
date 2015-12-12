@@ -17,7 +17,7 @@ Python library for plotting on google earth
 
 install:
 
-> pip install simplekml
+> $ pip install simplekml
 
 ### pandas
 
@@ -25,7 +25,7 @@ install:
 
 install:
 
-> pip install pandas
+> $ pip install pandas
 
 ### Google Earth (Pro)
 
@@ -39,7 +39,7 @@ from the upper link
 
 Download this repository,
 
-> git clone https://github.com/AtsushiSakai/googleearthplot.git
+> $ git clone https://github.com/AtsushiSakai/googleearthplot.git
 
 import the library in your python code.
 
