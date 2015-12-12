@@ -13,6 +13,9 @@ Python library for plotting on google earth
 
 ![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
 
+![linechartfromcsv.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartfromcsv.png)
+
+![linecharwithheightsample2.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linecharwithheightsample2.png)
 
 ## Requirements
 
@@ -127,6 +130,49 @@ you can see:
 
 ![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
 
+
+### Line plot from csv file
+
+You can plot the line chart from a csv file:
+
+    #line plot from csv file
+    gep4=googleearthplot()
+    gep4.PlotLineChartFromCSV("sampledata/lineplotsampledata.csv", name="trajectory3", color="gold", width=10)
+    gep4.GenerateKMLFile(filepath="sample5.kml")
+
+
+you can get the image:
+
+![linechartfromcsv.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartfromcsv.png)
+
+Check the csv file format 
+
+- [lineplotsampledata.csv](https://github.com/AtsushiSakai/googleearthplot/blob/master/sampledata/lineplotsampledata.csv)
+
+### Line plot with height from csv file
+
+You can plot the line chart with height from a csv file:
+
+    #line plot from csv file with height
+    gep5=googleearthplot()
+    gep5.PlotLineChartFromCSV("sampledata/lineplotsampledata2.csv", name="trajectory4", color="orange", width=10)
+    gep5.GenerateKMLFile(filepath="sample6.kml")
+
+
+you can get:
+
+![linecharwithheightsample2.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linecharwithheightsample2.png)
+
+see the sample file
+
+[lineplotsampledata2.csv](https://github.com/AtsushiSakai/googleearthplot/blob/master/sampledata/lineplotsampledata2.csv)
+
+
+## Color options
+
+You can choose color options from below:
+
+'aliceblue', 'antiquewhite', 'aqua', 'aquamarine', 'azure', 'beige', 'bisque', 'black', 'blanchedalmond', 'blue', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'changealpha', 'changealphaint', 'chartreuse', 'chocolate', 'coral', 'cornflowerblue', 'cornsilk', 'crimson', 'cyan', 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki', 'darkmagenta', 'darkolivegreen', 'darkorange', 'darkorchid', 'darkred', 'darksalmon', 'darkseagreen', 'darkslateblue', 'darkslategray', 'darkslategrey', 'darkturquoise', 'darkviolet', 'deeppink', 'deepskyblue', 'dimgray', 'dimgrey', 'dodgerblue', 'firebrick', 'floralwhite', 'forestgreen', 'fuchsia', 'gainsboro', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'green', 'greenyellow', 'grey', 'hex', 'hexa', 'honeydew', 'hotpink', 'indianred', 'indigo', 'ivory', 'khaki', 'lavender', 'lavenderblush', 'lawngreen', 'lemonchiffon', 'lightblue', 'lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink', 'lightsalmon', 'lightseagreen', 'lightskyblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightyellow', 'lime', 'limegreen', 'linen', 'magenta', 'maroon', 'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumpurple', 'mediumseagreen', 'mediumslateblue', 'mediumspringgreen', 'mediumturquoise', 'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 'moccasin', 'navajowhite', 'navy', 'oldlace', 'olive', 'olivedrab', 'orange', 'orangered', 'orchid', 'palegoldenrod', 'palegreen', 'paleturquoise', 'palevioletred', 'papayawhip', 'peachpuff', 'peru', 'pink', 'plum', 'powderblue', 'purple', 'red', 'rgb', 'rosybrown', 'royalblue', 'saddlebrown', 'salmon', 'sandybrown', 'seagreen', 'seashell', 'sienna', 'silver', 'skyblue', 'slateblue', 'slategray', 'slategrey', 'snow', 'springgreen', 'steelblue', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 'violet', 'wheat', 'white', 'whitesmoke', 'yellow', 'yellowgreen'
 
 ## Licence
 
