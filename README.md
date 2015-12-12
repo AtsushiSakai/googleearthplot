@@ -37,13 +37,23 @@ from the upper link
 
 ## Install
 
+Download this repository,
+
+> git clone https://github.com/AtsushiSakai/googleearthplot.git
+
+import the library in your python code.
+
+> import googleearthplot
+
 ## Usages
 
 This library generates a kml file for plot.
 
+You can choice from some plot options as below.
+
 ### A bar plot 
 
-You can plot a bar chart with the code
+You can plot a bar chart like:
 
     #A bar plot 
     gep1=googleearthplot()
@@ -64,6 +74,18 @@ you can see the plot on Google Earth.
 
 
 ### Bar plots from csv data
+
+You can plot bar charts from a csv file like:
+
+    #bar plot from csv
+    gep=googleearthplot()
+    gep.PlotBarChartsFromCSV("barchartsampledata.csv")
+    gep.GenerateKMLFile(filepath="sample2.kml")
+    
+
+you can see the plot when you click.
+
+![barchartssample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartssample.png)
 
 
 ## Licence
