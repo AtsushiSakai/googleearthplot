@@ -94,12 +94,12 @@ if __name__ == '__main__':
     name="barsample"
     color="red"
     gep1.PlotBarChart(lat,lon,num,size,name,color);
-    gep1.GenerateKMLFile(filepath="/Users/AtsushiSakai/Desktop/sample1.kml")
+    gep1.GenerateKMLFile(filepath="sample1.kml")
 
     #bar plot from csv
     gep=googleearthplot()
     gep.PlotBarChartsFromCSV("barchartsampledata.csv")
-    gep.GenerateKMLFile(filepath="/Users/AtsushiSakai/Desktop/sample2.kml")
+    gep.GenerateKMLFile(filepath="sample2.kml")
     
     
 
