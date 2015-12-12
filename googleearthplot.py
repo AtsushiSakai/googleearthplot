@@ -159,8 +159,8 @@ if __name__ == '__main__':
     gep4.GenerateKMLFile(filepath="sample5.kml")
 
     #line plot from csv file with height
-    gep4=googleearthplot()
-    gep4.PlotLineChartFromCSV("sampledata/lineplotsampledata2.csv", name="trajectory4", color="orange", width=10)
-    gep4.GenerateKMLFile(filepath="sample6.kml")
+    gep5=googleearthplot()
+    gep5.PlotLineChartFromCSV("sampledata/lineplotsampledata2.csv", name="trajectory4", color="orange", width=10)
+    gep5.GenerateKMLFile(filepath="sample6.kml")
 
 
