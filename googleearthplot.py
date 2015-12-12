@@ -17,6 +17,31 @@ class googleearthplot:
     def __init__(self):
         self.kml = simplekml.Kml()
 
+    def PlotLineChart(self, latList, lonList, heightList=[], name="", color="red", width=5):
+        """
+        Plot Line Chart
+        """
+        ls = self.kml.newlinestring(
+                name=name,
+                description=name
+                )
+        coords=[]
+        if len(heightList)==0:
+            for (lat,lon) in zip(latList,lonList):
+                coords.append((lat,lon))
+        else:
+            for (lat,lon,height) in zip(latList, lonList, heightList):
+                coords.append((lat,lon,height))
+        
+        ls.coords = coords
+        ls.extrude = 1
+        ls.altitudemode = simplekml.AltitudeMode.relativetoground
+        ls.style.linestyle.width = width
+        ls.style.linestyle.color = self.GetColorObject(color)
+
+        print "[PlotLineChart]name:"+name+",color:"+color+",width:"+str(width)
+
+
     def PlotBarChart(self, lat, lon, num, size=1, name="", color="red"):
         """
         Add Bar Chart
@@ -100,6 +125,21 @@ if __name__ == '__main__':
     gep=googleearthplot()
     gep.PlotBarChartsFromCSV("barchartsampledata.csv")
     gep.GenerateKMLFile(filepath="sample2.kml")
+
+    #Plot line chart
+    gep2=googleearthplot()
+    lat=[-77.6192,-77.6192,-77.6195,-77.6198,-77.6208,-77.6216,-77.6216,-77.6216]
+    lon=[43.1725,43.1725,43.1728,43.173,43.1725,43.1719,43.1719,43.1719,43.1719]
+    gep2.PlotLineChart(lat, lon, name="trajectory",color="pink")
+    gep2.GenerateKMLFile(filepath="sample3.kml")
     
+    #Plot line chart with height
+    gep3=googleearthplot()
+    lat=[-77.6192,-77.6192,-77.6195,-77.6198,-77.6208,-77.6216]
+    lon=[43.1725,43.1725,43.1728,43.173,43.1725,43.1719,43.1719]
+    height=[10,40,60,80,100,120,140]
+    gep3.PlotLineChart(lat, lon, heightList=height, name="trajectory2",color="aqua")
+    gep3.GenerateKMLFile(filepath="sample4.kml")
+ 
     
 

@@ -21,7 +21,7 @@ install:
 
 ### pandas
 
-- [Python Data Analysis Library ― pandas: Python Data Analysis Library](http://pandas.pydata.org/)
+- [Python Data Analysis Library  pandas: Python Data Analysis Library](http://pandas.pydata.org/)
 
 install:
 
