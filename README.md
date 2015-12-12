@@ -97,12 +97,35 @@ The CSV file format should be like the sample file:
 
 ### Line plot
 
+You can plot a line chart:
+
+    #Plot line chart
+    gep2=googleearthplot()
+    lat=[-77.6192,-77.6192,-77.6195,-77.6198,-77.6208,-77.6216,-77.6216,-77.6216]
+    lon=[43.1725,43.1725,43.1728,43.173,43.1725,43.1719,43.1719,43.1719,43.1719]
+    gep2.PlotLineChart(lat, lon, name="trajectory",color="pink")
+    gep2.GenerateKMLFile(filepath="sample3.kml")
+    
+Then, you can see:
+
 ![linechartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartsample.png)
 
 ### Line plot with height 
 
-![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
+You can plot a line chart with height data:
 
+    #Plot line chart with height
+    gep3=googleearthplot()
+    lat=[-77.6192,-77.6192,-77.6195,-77.6198,-77.6208,-77.6216]
+    lon=[43.1725,43.1725,43.1728,43.173,43.1725,43.1719,43.1719]
+    height=[10,40,60,80,100,120,140]
+    gep3.PlotLineChart(lat, lon, heightList=height, name="trajectory2",color="aqua")
+    gep3.GenerateKMLFile(filepath="sample4.kml")
+ 
+
+you can see:
+
+![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
 
 
 ## Licence
