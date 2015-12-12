@@ -43,18 +43,18 @@ This library generates a kml file for plot.
 
 ### A bar plot 
 
-"""python
-#A bar plot 
-gep1=googleearthplot()
-lat=18.333868#degree
-lon=-34.038274#degree
-num=100 #bar height size
-size=1  #meter
-name="barsample"
-color="red"
-gep1.PlotBarChart(lat,lon,num,size,name,color);
-gep1.GenerateKMLFile(filepath="sample1.kml")
-"""
+You can plot a bar chart with the code
+
+    #A bar plot 
+    gep1=googleearthplot()
+    lat=18.333868#degree
+    lon=-34.038274#degree
+    num=100 #bar height size
+    size=1  #meter
+    name="barsample"
+    color="red"
+    gep1.PlotBarChart(lat,lon,num,size,name,color);
+    gep1.GenerateKMLFile(filepath="sample1.kml")
 
 If you click the generated kml file,
 
