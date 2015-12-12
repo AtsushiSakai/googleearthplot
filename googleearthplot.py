@@ -85,7 +85,7 @@ class googleearthplot:
 
 if __name__ == '__main__':
 
-    #bar plot from csv
+    #A bar plot 
     gep1=googleearthplot()
     lat=18.333868#degree
     lon=-34.038274#degree
