@@ -27,7 +27,7 @@ install:
 
 > pip install pandas
 
-## Google Earth (Pro)
+### Google Earth (Pro)
 
 - [Google Earth](http://www.google.com/earth/download/ge/agree.html)
 
@@ -47,9 +47,7 @@ import the library in your python code.
 
 ## Usages
 
-This library generates a kml file for plot.
-
-You can choice from some plot options as below.
+This library generates a kml file for plot as below.
 
 ### A bar plot 
 
@@ -83,9 +81,15 @@ You can plot bar charts from a csv file like:
     gep.GenerateKMLFile(filepath="sample2.kml")
     
 
-you can see the plot when you click.
+you can see the plot when you click the generated kml file.
 
 ![barchartssample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartssample.png)
+
+The CSV file format should be like the sample file:
+
+- [barchartsampledata.csv](https://github.com/AtsushiSakai/googleearthplot/blob/master/barchartsampledata.csv)
+
+
 
 
 ## Licence
