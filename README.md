@@ -9,6 +9,11 @@ Python library for plotting on google earth
 
 ![barchartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartsample.png)
 
+![linechartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartsample.png)
+
+![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
+
+
 ## Requirements
 
 ### simplekml
@@ -89,6 +94,14 @@ The CSV file format should be like the sample file:
 
 - [barchartsampledata.csv](https://github.com/AtsushiSakai/googleearthplot/blob/master/barchartsampledata.csv)
 
+
+### Line plot
+
+![linechartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartsample.png)
+
+### Line plot with height 
+
+![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
 
 
 
