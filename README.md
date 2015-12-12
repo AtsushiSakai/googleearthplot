@@ -11,6 +11,17 @@ Python library for plotting on google earth
 
 ## Requirements
 
+### simplekml
+
+- [Overview ― SIMPLEKML 1.2.8 documentation](http://www.simplekml.com/en/latest/index.html)
+
+install:
+
+> pip install simplekml
+
+### pandas
+
+
 ## Install
 
 ## How to Use
@@ -21,6 +32,6 @@ Python library for plotting on google earth
 
 ## Author
 
-[AtsushiSakai](https://github.com/AtsushiSakai)
+[AtsushiSakai](http://atsushisakai.github.io/)
 
 
