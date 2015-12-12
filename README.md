@@ -3,6 +3,11 @@ googleearthplot
 
 Python library for plotting on google earth
 
+## Galleries
+
+![barchartssample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartssample.png)
+
+![barchartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartsample.png)
 
 ## Requirements
 
