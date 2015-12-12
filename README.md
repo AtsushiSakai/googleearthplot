@@ -81,7 +81,7 @@ You can plot bar charts from a csv file like:
     gep.GenerateKMLFile(filepath="sample2.kml")
     
 
-you can see the plot when you click the generated kml file.
+you can see plots when you click the generated kml file.
 
 ![barchartssample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartssample.png)
 
