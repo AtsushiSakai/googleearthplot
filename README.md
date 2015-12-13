@@ -206,7 +206,7 @@ You can choose a color option from belows:
 
 ## Licence
 
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+[MIT](https://github.com/AtsushiSakai/googleearthplot/blob/master/LICENSE)
 
 ## Author
 
