@@ -121,6 +121,23 @@ class googleearthplot:
 
         print "[PlotBarChartsFromCSV]"+str(nbar)+" bars have plotted"
 
+    def PlotOverlayImg(self, filepath, xpixel, ypixel, name="ScreenOverlay"):
+        """
+        filepath: file path
+        xpixel
+        ypixel
+        name (option)
+        """
+        print "[PlotOverlayImg] plotting image file:"+filepath+",xpixel:"+str(xpixel)+",ypixel"+str(ypixel)
+
+        screen = self.kml.newscreenoverlay(name=name)
+        screen.icon.href = filepath
+        screen.overlayxy = simplekml.OverlayXY(x=0,y=0,xunits=simplekml.Units.fraction,yunits=simplekml.Units.fraction)
+        screen.screenxy = simplekml.ScreenXY(x=xpixel, y=ypixel,xunits=simplekml.Units.pixel,yunits=simplekml.Units.insetpixels)
+        screen.size.x = -1
+        screen.size.y = -1
+        screen.size.xunits = simplekml.Units.fraction
+        screen.size.yunits = simplekml.Units.fraction
 
     def GetColorObject(self, color):
         valiableStr="simplekml.Color."+color
@@ -185,6 +202,12 @@ if __name__ == '__main__':
     gep7=googleearthplot()
     gep7.PlotBarChartsFromCSV("sampledata/barchartsampledata.csv",addLabel=True)
     gep7.GenerateKMLFile(filepath="sample7.kml")
+
+    #bar plot with label from csv file
+    gep8=googleearthplot()
+    gep8.PlotOverlayImg("img/samplelogo.png",200,300,name="logo")
+    gep8.GenerateKMLFile(filepath="sample8.kml")
+
 
 
 
