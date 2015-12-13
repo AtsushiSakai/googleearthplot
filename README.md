@@ -19,6 +19,8 @@ Python library for plotting on google earth
 
 ![barchartwithlabel.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartwithlabel.png)
 
+![plotoverlayimagesample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/plotoverlayimagesample.png)
+
 ## Requirements
 
 ### simplekml
@@ -178,6 +180,21 @@ you can get:
 see the csv sample file
 
 [lineplotsampledata2.csv](https://github.com/AtsushiSakai/googleearthplot/blob/master/sampledata/lineplotsampledata2.csv)
+
+
+## Plot Overlay Image
+
+You can plot a overlay image (logo, etc.) 
+
+    #Plot overlay image sample
+    gep8=googleearthplot()
+    gep8.PlotOverlayImg("img/samplelogo.png",200,300,name="logo")
+    gep8.GenerateKMLFile(filepath="sample8.kml")
+
+This is a sample screenshot:
+
+![plotoverlayimagesample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/plotoverlayimagesample.png)
+
 
 
 ## Color options

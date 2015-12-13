@@ -203,7 +203,7 @@ if __name__ == '__main__':
     gep7.PlotBarChartsFromCSV("sampledata/barchartsampledata.csv",addLabel=True)
     gep7.GenerateKMLFile(filepath="sample7.kml")
 
-    #bar plot with label from csv file
+    #Plot overlay image sample
     gep8=googleearthplot()
     gep8.PlotOverlayImg("img/samplelogo.png",200,300,name="logo")
     gep8.GenerateKMLFile(filepath="sample8.kml")
