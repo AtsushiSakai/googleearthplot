@@ -54,7 +54,7 @@ class googleearthplot:
         print "[PlotLineChart]name:"+name+",color:"+color+",width:"+str(width)
 
 
-    def PlotBarChart(self, lat, lon, num, size=1, name="", color="red"):
+    def PlotBarChart(self, lat, lon, num, size=1, name="", color="red", addLabel=False):
         """
         Add Bar Chart
         size: unit:meterm, defalut:1m
@@ -67,7 +67,10 @@ class googleearthplot:
                 extrude=1,
                 tessellate=1,
                 description=str(num),
-                altitudemode="absolute")
+                visibility=1,
+                #gxballoonvisibility=1,
+                altitudemode="absolute"
+                )
 
         latShift=self.CalcLatFromMeter(size)
         lonShift=self.CalcLonFromMeter(size, lat)
@@ -80,14 +83,29 @@ class googleearthplot:
         boundary.append((lat+latShift,lon+lonShift,num))
         pol.outerboundaryis=boundary
 
+
         #Set Color
         colorObj=self.GetColorObject(color)
         pol.style.linestyle.color = colorObj
         pol.style.polystyle.color = colorObj
 
+        if addLabel:
+            self.PlotLabel(lat,lon,name+":"+str(num),color=color)
+
         print "[PlotBarChart]lat:"+str(lat)+",lon:"+str(lon)
 
-    def PlotBarChartsFromCSV(self, filepath):
+    def PlotLabel(self,lat,lon,label,color="red",labelScale=1):
+        """
+        Plot only label
+        """
+        pnt = self.kml.newpoint(name=label)
+        pnt.coords = [(lat, lon)]
+        pnt.style.labelstyle.color = self.GetColorObject(color)
+        pnt.style.labelstyle.scale = labelScale
+        pnt.style.iconstyle.scale = 0  # hide icon
+        print "[PlotLabel]"+label
+
+    def PlotBarChartsFromCSV(self, filepath, addLabel=False):
         """
         filepath: csvfile path
         """
@@ -98,7 +116,7 @@ class googleearthplot:
         nbar=0
         zipdata=zip(data["lat"],data["lon"],data["num"],data["size"],data["name"],data["color"])
         for (lat, lon, num, size, name, color) in zipdata:
-            self.PlotBarChart(lat,lon,num,size,name,color)
+            self.PlotBarChart(lat,lon,num,size,name,color,addLabel=addLabel)
             nbar+=1
 
         print "[PlotBarChartsFromCSV]"+str(nbar)+" bars have plotted"
@@ -162,5 +180,13 @@ if __name__ == '__main__':
     gep5=googleearthplot()
     gep5.PlotLineChartFromCSV("sampledata/lineplotsampledata2.csv", name="trajectory4", color="orange", width=10)
     gep5.GenerateKMLFile(filepath="sample6.kml")
+
+    #bar plot with label from csv file
+    gep7=googleearthplot()
+    gep7.PlotBarChartsFromCSV("sampledata/barchartsampledata.csv",addLabel=True)
+    gep7.GenerateKMLFile(filepath="sample7.kml")
+
+
+
 
 
