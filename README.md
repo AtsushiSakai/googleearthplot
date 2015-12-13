@@ -80,6 +80,15 @@ you can see the plot on Google Earth.
 
 ![barchartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartsample.png)
 
+The addLabel flag is on, 
+
+    PlotBarChart(lat,lon,num,size,name,color,addLabel=True)
+
+you can add labels on the plot
+
+![barchartwithlabel.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartwithlabel.png)
+
+
 
 ### Bar plots from csv data
 
@@ -132,14 +141,6 @@ you can see:
 
 ![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
 
-
-The addLabel flag is on, 
-
-  PlotBarChart(lat,lon,num,size,name,color,addLabel=True)
-
-you can add labels on the plot
-
-![barchartwithlabel.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartwithlabel.png)
 
 
 ### Line plot from csv file
