@@ -40,10 +40,10 @@ class googleearthplot:
         coords=[]
         if len(heightList)==0:
             for (lat,lon) in zip(latList,lonList):
-                coords.append((lat,lon))
+                coords.append((lon,lat))
         else:
             for (lat,lon,height) in zip(latList, lonList, heightList):
-                coords.append((lat,lon,height))
+                coords.append((lon,lat,height))
         
         ls.coords = coords
         ls.extrude = 1
@@ -76,11 +76,12 @@ class googleearthplot:
         lonShift=self.CalcLonFromMeter(size, lat)
 
         boundary=[]
-        boundary.append((lat+latShift,lon+lonShift,num))
-        boundary.append((lat-latShift,lon+lonShift,num))
-        boundary.append((lat-latShift,lon-lonShift,num))
-        boundary.append((lat+latShift,lon-lonShift,num))
-        boundary.append((lat+latShift,lon+lonShift,num))
+        boundary.append((lon+lonShift,lat+latShift,num))
+        boundary.append((lon-lonShift,lat+latShift,num))
+        boundary.append((lon-lonShift,lat-latShift,num))
+        boundary.append((lon+lonShift,lat-latShift,num))
+        boundary.append((lon+lonShift,lat+latShift,num))
+ 
         pol.outerboundaryis=boundary
 
 
@@ -99,7 +100,7 @@ class googleearthplot:
         Plot only label
         """
         pnt = self.kml.newpoint(name=label)
-        pnt.coords = [(lat, lon)]
+        pnt.coords = [(lon, lat)]
         pnt.style.labelstyle.color = self.GetColorObject(color)
         pnt.style.labelstyle.scale = labelScale
         pnt.style.iconstyle.scale = 0  # hide icon
@@ -159,8 +160,8 @@ if __name__ == '__main__':
 
     #A bar plot 
     gep1=googleearthplot()
-    lat=18.333868#degree
-    lon=-34.038274#degree
+    lon=18.333868#degree
+    lat=-34.038274#degree
     num=100 #bar height size
     size=1  #meter
     name="barsample"
@@ -182,8 +183,8 @@ if __name__ == '__main__':
     
     #Plot line chart with height
     gep3=googleearthplot()
-    lat=[-77.6192,-77.6192,-77.6195,-77.6198,-77.6208,-77.6216]
-    lon=[43.1725,43.1725,43.1728,43.173,43.1725,43.1719,43.1719]
+    lat=[43.1725,43.1725,43.1728,43.173,43.1725,43.1719,43.1719]
+    lon=[-77.6192,-77.6192,-77.6195,-77.6198,-77.6208,-77.6216]
     height=[10,40,60,80,100,120,140]
     gep3.PlotLineChart(lat, lon, heightList=height, name="trajectory2",color="aqua")
     gep3.GenerateKMLFile(filepath="sample4.kml")
