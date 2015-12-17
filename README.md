@@ -21,6 +21,8 @@ Python library for plotting on google earth
 
 ![plotoverlayimagesample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/plotoverlayimagesample.png)
 
+![pointchart.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/pointchart.png)
+
 ## Requirements
 
 ### simplekml
@@ -60,6 +62,22 @@ import the library in your python code.
 ## Usages
 
 This library generates a kml file for plot as below.
+
+### Point plot
+
+A point plot is created like this:
+
+    #Plot point
+    lon=18.333868#degree
+    lat=-34.038274#degree
+    gep9=googleearthplot()
+    gep9.PlotPoints(lat,lon,"point")
+    gep9.GenerateKMLFile(filepath="sample9.kml")
+
+Then, you can see
+
+![pointchart.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/pointchart.png)
+
 
 ### A bar plot 
 

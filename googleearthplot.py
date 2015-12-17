@@ -230,9 +230,9 @@ if __name__ == '__main__':
     #Plot point
     lon=18.333868#degree
     lat=-34.038274#degree
-    gep8=googleearthplot()
-    gep8.PlotPoints(lat,lon,"point")
-    gep8.GenerateKMLFile(filepath="sample9.kml")
+    gep9=googleearthplot()
+    gep9.PlotPoints(lat,lon,"point")
+    gep9.GenerateKMLFile(filepath="sample9.kml")
 
 
 
