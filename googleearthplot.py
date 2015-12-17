@@ -17,6 +17,8 @@ class googleearthplot:
     def __init__(self):
         self.kml = simplekml.Kml()
 
+
+
     def PlotLineChartFromCSV(self, filepath, name="", color="red", width=5):
         """
         Plot Line Chart from CSVfile
@@ -28,6 +30,21 @@ class googleearthplot:
             self.PlotLineChart(data["lat"],data["lon"],heightList=data["height"], name=name,color=color,width=width)
         else:
             self.PlotLineChart(data["lat"],data["lon"],name=name,color=color,width=width)
+
+    def PlotPoints(self,lat,lon,label,description="",color="red",labelScale=1,time="",id=""):
+        """
+        Plot only label
+        """
+        pnt = self.kml.newpoint(name=label,
+                description=description
+                )
+        pnt.coords = [(lon, lat)]
+        pnt.style.labelstyle.color = self.GetColorObject(color)
+        pnt.style.labelstyle.scale = labelScale
+        pnt.timestamp.when = time
+
+        print "[PlotPoint]"+label+",lat:"+str(lat)+",lon:"+str(lon)+",time"+time
+
      
     def PlotLineChart(self, latList, lonList, heightList=[], name="", color="red", width=5):
         """
@@ -52,6 +69,7 @@ class googleearthplot:
         ls.style.linestyle.color = self.GetColorObject(color)
 
         print "[PlotLineChart]name:"+name+",color:"+color+",width:"+str(width)
+
 
 
     def PlotBarChart(self, lat, lon, num, size=1, name="", color="red", addLabel=False):
@@ -208,6 +226,14 @@ if __name__ == '__main__':
     gep8=googleearthplot()
     gep8.PlotOverlayImg("img/samplelogo.png",200,300,name="logo")
     gep8.GenerateKMLFile(filepath="sample8.kml")
+
+    #Plot point
+    lon=18.333868#degree
+    lat=-34.038274#degree
+    gep8=googleearthplot()
+    gep8.PlotPoints(lat,lon,"point")
+    gep8.GenerateKMLFile(filepath="sample9.kml")
+
 
 
 
