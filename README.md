@@ -59,6 +59,8 @@ import the library in your python code.
 
 > import googleearthplot
 
+> sudo pip install git+https://github.com/AtsushiSakai/googleearthplot.git
+
 ## Usages
 
 This library generates a kml file for plot as below.
