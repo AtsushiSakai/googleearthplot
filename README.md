@@ -29,17 +29,9 @@ Python library for plotting on google earth
 
 - [Overview SIMPLEKML 1.2.8 documentation](http://www.simplekml.com/en/latest/index.html)
 
-install:
-
-> $ pip install simplekml
-
 ### pandas
 
 - [Python Data Analysis Library  pandas: Python Data Analysis Library](http://pandas.pydata.org/)
-
-install:
-
-> $ pip install pandas
 
 ### Google Earth (Pro)
 
@@ -51,15 +43,13 @@ from the upper link
 
 ## Install
 
-Download this repository,
+You can install to use pip:
 
-> $ git clone https://github.com/AtsushiSakai/googleearthplot.git
+> sudo pip install googleearthplot
 
-import the library in your python code.
+This is the PyPI page
 
-> import googleearthplot
-
-> sudo pip install git+https://github.com/AtsushiSakai/googleearthplot.git
+[googleearthplot 0.0.2 : Python Package Index](https://pypi.python.org/pypi/googleearthplot)
 
 ## Usages
 
