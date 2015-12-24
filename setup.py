@@ -10,5 +10,8 @@ setup(
     keywords = "google earth plot kml",
     url = "https://github.com/AtsushiSakai/googleearthplot",
     packages=find_packages(),
-    install_requires = [],
+    install_requires = [
+        "simplekml",
+        "pandas",
+        ],
 )
