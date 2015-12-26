@@ -47,13 +47,13 @@ You can install to use pip:
 
 > sudo pip install googleearthplot
 
-This is the PyPI page
-
-[googleearthplot 0.0.2 : Python Package Index](https://pypi.python.org/pypi/googleearthplot)
-
 ## Usages
 
 This library generates a kml file for plot as below.
+
+First of all, import the lib:
+
+    from googleearthplot import googleearthplot
 
 ### Point plot
 
@@ -217,6 +217,11 @@ You can choose a color option from belows:
 ## Licence
 
 [MIT](https://github.com/AtsushiSakai/googleearthplot/blob/master/LICENSE)
+
+## PyPI page
+
+[googleearthplot](https://pypi.python.org/pypi/googleearthplot)
+
 
 ## Author
 
