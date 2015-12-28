@@ -7,21 +7,21 @@ Python library for plotting on google earth
 
 ![barchartssample.png](/img/barchartssample.png)
 
-![barchartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartsample.png)
+![barchartsample.png](/img/barchartsample.png)
 
-![linechartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartsample.png)
+![linechartsample.png](/img/linechartsample.png)
 
-![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
+![linechartwithheightsample.png](/img/linechartwithheightsample.png)
 
-![linechartfromcsv.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartfromcsv.png)
+![linechartfromcsv.png](/img/linechartfromcsv.png)
 
-![linecharwithheightsample2.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linecharwithheightsample2.png)
+![linecharwithheightsample2.png](/img/linecharwithheightsample2.png)
 
-![barchartwithlabel.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartwithlabel.png)
+![barchartwithlabel.png](/img/barchartwithlabel.png)
 
-![plotoverlayimagesample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/plotoverlayimagesample.png)
+![plotoverlayimagesample.png](/img/plotoverlayimagesample.png)
 
-![pointchart.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/pointchart.png)
+![pointchart.png](/img/pointchart.png)
 
 ## Requirements
 
@@ -68,7 +68,7 @@ A point plot is created like this:
 
 Then, you can see
 
-![pointchart.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/pointchart.png)
+![pointchart.png](/img/pointchart.png)
 
 
 ### A bar plot 
@@ -90,7 +90,7 @@ If you click the generated kml file,
 
 you can see the plot on Google Earth.
 
-![barchartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartsample.png)
+![barchartsample.png](/img/barchartsample.png)
 
 The addLabel flag is on, 
 
@@ -98,7 +98,7 @@ The addLabel flag is on,
 
 you can add labels on the plot
 
-![barchartwithlabel.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartwithlabel.png)
+![barchartwithlabel.png](/img/barchartwithlabel.png)
 
 
 
@@ -114,11 +114,11 @@ You can plot bar charts from a csv file like:
 
 you can see plots when you click the generated kml file.
 
-![barchartssample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/barchartssample.png)
+![barchartssample.png](/img/barchartssample.png)
 
 The CSV file format should be like the sample file:
 
-- [barchartsampledata.csv](https://github.com/AtsushiSakai/googleearthplot/blob/master/barchartsampledata.csv)
+- [barchartsampledata.csv](/barchartsampledata.csv)
 
 
 ### Line plot
@@ -134,7 +134,7 @@ You can plot a line chart:
     
 Then, you can see:
 
-![linechartsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartsample.png)
+![linechartsample.png](/img/linechartsample.png)
 
 ### Line plot with height 
 
@@ -151,7 +151,7 @@ You can plot a line chart with height data:
 
 you can see:
 
-![linechartwithheightsample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartwithheightsample.png)
+![linechartwithheightsample.png](/img/linechartwithheightsample.png)
 
 
 
@@ -167,11 +167,11 @@ You can plot the line chart from a csv file:
 
 you can get the image:
 
-![linechartfromcsv.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linechartfromcsv.png)
+![linechartfromcsv.png](/img/linechartfromcsv.png)
 
 Check the csv file format 
 
-- [lineplotsampledata.csv](https://github.com/AtsushiSakai/googleearthplot/blob/master/sampledata/lineplotsampledata.csv)
+- [lineplotsampledata.csv](/sampledata/lineplotsampledata.csv)
 
 ### Line plot with height from csv file
 
@@ -185,11 +185,11 @@ You can plot the line chart with height from a csv file:
 
 you can get:
 
-![linecharwithheightsample2.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/linecharwithheightsample2.png)
+![linecharwithheightsample2.png](/img/linecharwithheightsample2.png)
 
 see the csv sample file
 
-[lineplotsampledata2.csv](https://github.com/AtsushiSakai/googleearthplot/blob/master/sampledata/lineplotsampledata2.csv)
+[lineplotsampledata2.csv](/sampledata/lineplotsampledata2.csv)
 
 
 ## Plot Overlay Image
@@ -203,7 +203,7 @@ You can plot a overlay image (logo, etc.)
 
 This is a sample screenshot:
 
-![plotoverlayimagesample.png](https://github.com/AtsushiSakai/googleearthplot/blob/master/img/plotoverlayimagesample.png)
+![plotoverlayimagesample.png](/img/plotoverlayimagesample.png)
 
 
 
