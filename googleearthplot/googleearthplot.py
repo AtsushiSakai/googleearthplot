@@ -13,7 +13,6 @@ import simplekml
 import pandas
 import math
 
-
 class googleearthplot:
 
     def __init__(self):

@@ -53,7 +53,9 @@ This library generates a kml file for plot as below.
 
 First of all, import the lib:
 
-    from googleearthplot import googleearthplot
+    from googleearthplot.googleearchplot import googleearthplot
+
+The import code depends on the script path which use googleearchplot.
 
 ### Point plot
 
