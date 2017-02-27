@@ -72,6 +72,21 @@ Then, you can see
 
 ![pointchart.png](/img/pointchart.png)
 
+　
+
+Of course, you can plot mutipul points.
+
+    # Plot point chart
+    gep10 = googleearthplot()
+    lat = [ -77.6192, -77.6195, -77.6198, -77.6208, -77.6216]
+    lon = [43.1725, 43.1728, 43.173, 43.1725, 43.1719, 43.1719]
+    for (ilat,ilon) in zip(lat,lon):
+        gep10.PlotPoints(ilat, ilon, "point")
+    gep10.GenerateKMLFile(filepath="sample10.kml")
+
+![pointchars.png](/img/pointschars.png)
+
+
 
 ### A bar plot 
 
